@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Muse Beauty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" id="brandName">Glow Muse</a>
+      <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="mainNav" class="main-nav">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#order">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <p class="eyebrow">Clean beauty. Bold confidence.</p>
+        <h1 id="heroHeading">Luxury makeup made for your glow-up era.</h1>
+        <p class="hero-sub" id="heroSubheading">
+          Discover skin-loving formulas, pigment-rich shades, and the essentials to level up your routine.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#products">Shop Products</a>
+          <a class="btn btn-outline" id="heroWhatsappBtn" href="#order">Order on WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <section id="products" class="section container">
+      <div class="section-head">
+        <h2>Products</h2>
+        <p>Find your perfect match.</p>
+      </div>
+
+      <div class="product-controls">
+        <input type="search" id="searchInput" placeholder="Search products..." aria-label="Search products" />
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+
+      <div id="productsGrid" class="products-grid"></div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+      <div class="about-card">
+        <p>
+          At <span id="aboutBrandName">Glow Muse Beauty</span>, we blend trend-forward color with skin-kind ingredients.
+          Every formula is made to help you feel radiant, expressive, and unstoppable—day to night.
+        </p>
+      </div>
+    </section>
+
+    <section id="reviews" class="section container">
+      <div class="section-head">
+        <h2>Reviews</h2>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <p>“The matte lipstick stays flawless all day. Obsessed!”</p>
+          <span>— Nia A.</span>
+        </article>
+        <article class="review-card">
+          <p>“The glow serum gives me instant glass-skin vibes.”</p>
+          <span>— Zara M.</span>
+        </article>
+        <article class="review-card">
+          <p>“Packaging is luxe and every shade is stunning.”</p>
+          <span>— Tola K.</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section container">
+      <div class="section-head">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How do I place an order?</summary>
+          <p>Use the Buy button on any product or fill the Order form below to message us directly on WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Do you offer shade recommendations?</summary>
+          <p>Yes! Send us a selfie on WhatsApp and we’ll help you pick your best shades.</p>
+        </details>
+        <details>
+          <summary>How long does delivery take?</summary>
+          <p>Most orders are processed within 24 hours and delivered in 2–5 business days.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="order" class="section container">
+      <div class="section-head">
+        <h2>Order</h2>
+        <p>Send your order directly to WhatsApp.</p>
+      </div>
+      <form id="orderForm" class="order-form">
+        <div class="form-grid">
+          <label>
+            Name
+            <input type="text" id="customerName" required placeholder="Your full name" />
+          </label>
+          <label>
+            Phone
+            <input type="tel" id="customerPhone" required placeholder="Your contact number" />
+          </label>
+        </div>
+        <label>
+          Product(s)
+          <input type="text" id="orderItems" required placeholder="e.g., Velvet Matte Lipstick x2, Glow Serum x1" />
+        </label>
+        <label>
+          Note (optional)
+          <textarea id="orderNote" rows="4" placeholder="Any special requests?"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send Order on WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> <span id="footerBrandName">Glow Muse Beauty</span></p>
+      <div class="social-links">
+        <a id="instagramLink" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a id="tiktokLink" href="#" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
